@@ -1,0 +1,61 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+body {
+  background-color: black;
+  color: white;
+}
+.navbar-brand {
+  color: aliceblue;
+  font-size: xx-large;
+  padding-left: 20px;
+}
+.nav-link {
+  color: aliceblue;
+}
+#land .card .card-img-overlay {
+  padding-left:  50px;
+  padding-top: 20px;
+  line-height: 1.7;
+}
+#land .card {
+  margin-top: 15px;
+}
+.footer {
+            background-color: #000;
+            color: #fff;
+            padding: 20px 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        .footer-logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .footer-copyright {
+            font-size: 14px;
+        }
+        
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .footer-logo {
+                margin-bottom: 10px;
+            }
+        }

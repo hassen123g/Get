@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App 2025 | NTI Course</title>
+    <!-- Bootstrap CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <!-- Axios CDN -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.10.0/axios.min.js"
+      integrity="sha512-WkZrEcQ5LMyNy6Y2PQf+Tu3vMcsmKKRKuPXtJSTHQJ3mpuvLRlA5dlDDhrrcXfyWr6Z/y3wIMfjfqVFO/gDZYQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- CSS File -->
+    <link rel="stylesheet" href="./style2.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="py-4 container">
+      <!-- Large Screen -->
+      <section class="d-flex justify-content-between align-items-center">
+        <!-- Logo -->
+        <div class="d-flex align-items-start gap-2">
+          
+          <p class="text-capitalize fs-4">
+            meta<span class="fw-bold">Blog</span>
+          </p>
+        </div>
+
+        <!-- Links -->
+        <ul class="d-none d-lg-flex align-items-center gap-5">
+          <li><a href="#" class="text-dark">Home</a></li>
+          <li><a href="#" class="text-dark">Blog</a></li>
+          <li><a href="#" class="text-dark">Single Post</a></li>
+          <li><a href="./index.html" class="text-dark">Pages</a></li>
+          <li><a href="#" class="text-dark">Contact</a></li>
+        </ul>
+
+        <!-- Theme -->
+        <div class="d-flex align-items-center gap-3">
+          <a href="../login.html" role="button" id="authBtn" class="btn btn-danger"
+            >Logout</a
+          >
+          <!-- Theme Btn -->
+          <div id="themeBtn">
+            <i class="bi bi-moon-fill" id="moon"></i>
+            <i class="bi bi-brightness-high-fill d-none" id="sun"></i>
+          </div>
+
+          <!-- Toggle Links -->
+          <div class="d-block d-lg-none" id="menu">
+            <i class="bi bi-list fs-4"></i>
+          </div>
+        </div>
+      </section>
+
+      <!-- Small Screen -->
+      <section id="responsiveMenu" class="d-none d-lg-none">
+        <!-- Links -->
+        <ul class="d-flex flex-column align-items-start gap-3 py-3 px-0">
+          <li class="w-100">
+            <a href="../index.html" class="text-dark">Home</a>
+          </li>
+          <li class="w-100">
+            <a href="../index.html" class="text-dark">Blog</a>
+          </li>
+          <li class="w-100">
+            <a href="../index.html" class="text-dark">Single Post</a>
+          </li>
+          <li class="w-100">
+            <a href="../index.html" class="text-dark">Pages</a>
+          </li>
+          <li class="w-100">
+            <a href="../index.html" class="text-dark">Contact</a>
+          </li>
+        </ul>
+      </section>
+    </header>
+
+    <main class="container">
+      <h1
+        class="text-center fs-1 fw-bold text-uppercase text-primary my-5 d-flex align-content-center justify-content-center gap-3"
+      >
+        <span>Admin Dashboard</span>
+      </h1>
+
+      <!-- Form -->
+      <form class="my-5">
+        <div>
+          <input
+            type="text"
+            id="title"
+            placeholder="Title"
+            class="form-control"
+            required
+          />
+        </div>
+
+        <div class="my-3">
+          <input
+            type="text"
+            id="category"
+            placeholder="Category"
+            class="form-control"
+            
+          />
+        </div>
+
+        <div class="my-3">
+          <input
+            type="file"
+            id="image"
+            accept="image/*"
+            class="form-control"
+            required
+          />
+        </div>
+
+        <div class="my-3">
+          <textarea
+            id="body"
+            cols="30"
+            rows="10"
+            placeholder="Message..."
+            class="form-control"
+            
+          ></textarea>
+        </div>
+        <div class="d-flex justify-content-between align-content-center">
+          <button type="submit" class="btn btn-success w-25">
+            Add New Post
+          </button>
+          <button type="button" id="removeBtn" class="btn btn-danger w-25">
+            Delete All Post
+          </button>
+        </div>
+      </form>
+
+      <!-- Table -->
+      <table class="table table-bordered table-striped text-center">
+        <thead class="table-dark">
+          <th>#</th>
+          <th>Image</th>
+          <th>Title</th>
+          <th>Body</th>
+          <th>Category</th>
+          <th>Edit</th>
+          <th>Remove</th>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+    </main>
+
+    <!-- JS File -->
+    <script src="./script2.js"></script>
+  </body>
+</html>
